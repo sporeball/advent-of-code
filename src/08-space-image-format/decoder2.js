@@ -16,11 +16,11 @@ const decoder2 = (input) => {
     var row = "";
     for (var j = 0; j < 25; j++) {
       if (data[ptr] == 0) {
-        row += "#";
-      } else if (data[ptr] == 1) {
         row += " ";
+      } else if (data[ptr] == 1) {
+        row += "■";
       } else {
-        row += "~";
+        row += "⸬";
       }
       
       ptr++;
