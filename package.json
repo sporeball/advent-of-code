@@ -1,19 +1,19 @@
 {
-  "name": "advent-of-code-2019",
+  "name": "advent-of-code",
   "version": "0.0.0",
-  "description": "my solutions for Advent of Code 2019",
+  "description": "my solutions for Advent of Code",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sporeball/advent-of-code-2019.git"
+    "url": "git+https://github.com/sporeball/advent-of-code.git"
   },
   "author": "sporeball",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/sporeball/advent-of-code-2019/issues"
+    "url": "https://github.com/sporeball/advent-of-code/issues"
   },
-  "homepage": "https://github.com/sporeball/advent-of-code-2019#readme"
+  "homepage": "https://github.com/sporeball/advent-of-code#readme"
 }
