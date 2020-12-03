@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/sporeball/advent-of-code/issues"
   },
-  "homepage": "https://github.com/sporeball/advent-of-code#readme"
+  "homepage": "https://github.com/sporeball/advent-of-code#readme",
+  "dependencies": {
+    "eol": "^0.9.1"
+  }
 }
