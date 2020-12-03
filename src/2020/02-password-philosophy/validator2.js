@@ -1,4 +1,6 @@
-const validator2 = (input) => {
+const input = require("../../../common").input;
+
+const validator2 = () => {
   var arr = input.split("\n");
   var valid = 0;
 
