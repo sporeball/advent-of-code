@@ -1,6 +1,6 @@
 const input = require("../../../common").input;
 
-const scanner = () => {
+const scanner2 = () => {
   const ecls = ["amb", "blu", "brn", "gry", "grn", "hzl", "oth"];
   var valid = 0;
 
@@ -34,4 +34,4 @@ const scanner = () => {
   return valid;
 }
 
-module.exports = scanner;
+module.exports = scanner2;
