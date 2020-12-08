@@ -1,7 +1,8 @@
 const input = require("../../../common").input;
 var bags;
+var t = 0; // bags within the shiny gold bag
 
-const luggage = () => {
+const luggage2 = () => {
   bags = Object.fromEntries(
     input.split("\n")
     // split each bag into self and contents
@@ -12,25 +13,27 @@ const luggage = () => {
     ].map(y => y.split(", ")))
     // concatenate the two sub-arrays
     .map(x => x[0].concat(x[1])
-      // remove "bag[s][.]" and the subtotals
+      // remove "bag[s][.]"
       .map(y => y.slice(0, y.indexOf(" bag")))
-      .map((y, i) => i == 0 ? y : y.slice(2))
     )
     .map(x => [x[0], x.slice(1)])
   );
 
-  return Object.values(bags).map(k => k.map(x => recurse(x)))
-    .map(x => x.flat(Infinity))
-    .filter(x => x.includes("shiny gold"))
-    .length;
+  // recurse over the shiny gold bag
+  bags["shiny gold"] = bags["shiny gold"].map(x => Array(+x.slice(0, 1)).fill(x.slice(2)))
+    .flat(Infinity)
+    .map(x => recurse2(x));
+
+  return t;
 }
 
-recurse = item => {
-  if (item.includes("shiny gold") || item == " other" || bags[item] == " other") {
+recurse2 = item => {
+  t++;
+  if (bags[item] == "no other") {
     return item;
   } else {
-    return bags[item].map(x => recurse(x));
+    return bags[item].map(x => Array(+x.slice(0, 1)).fill(x.slice(2))).flat(Infinity).map(x => recurse2(x));
   }
 }
 
-module.exports = luggage;
+module.exports = luggage2;
