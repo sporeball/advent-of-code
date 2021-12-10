@@ -3,7 +3,6 @@ const input = require('../../../common').input;
 const errors = () => {
   let arr = input.split('\n')
     .slice(0, -1);
-  const openings = ['(', '[', '{', '<'];
   const closings = [')', ']', '}', '>'];
   const lookup = [3, 57, 1197, 25137];
 
@@ -27,4 +26,7 @@ const recurse = line => {
   }
 };
 
-module.exports = errors;
+module.exports = {
+  errors,
+  recurse
+};
